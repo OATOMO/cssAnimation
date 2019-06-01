@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <style typr="text/css">
+      .transform{
+        width: 1000px;
+        background-color: #fdfdfd;
+        margin: 50px auto;
+      }
+      .transform:after{
+        clear: both;
+        content: ' ';
+        display: block;
+        overflow: hidden;
+      }
+      .transform > p{
+        width: 230px;
+        float: left;
+        border: 1px #999 solid;
+        margin-right: 10px;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+      .transform > p strong{
+         display: block;
+         background-color: #eee;
+         line-height: 28px;
+         font-size: 20px;
+         font-family: monospace;
+         color: #333;
+         margin-bottom: 10px;
+      }
+
+      .transform > p span{
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        border: 1px #ccc solid;
+        background-color: #09f;
+
+      }
+
+    </style>
+</head>
+<body>
+  <div class="transform">
+    <p>
+        <strong>旋转 (rotate)</strong>
+        <span class="rotate"></span>
+    </P>
+    <p>
+        <strong>移动 (translate)</strong>
+        <span class="translate"></span>
+    </P>
+    <p>
+        <strong>缩放 (scale)</strong>
+        <span class="scale"></span>
+    </P>
+    <p>
+        <strong>扭曲 (skew)</strong>
+        <span class="skew"></span>
+    </P>
+  </div>
+</body>
+
+</html>

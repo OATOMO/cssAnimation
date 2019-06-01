@@ -1,0 +1,45 @@
+*动画过度效果属性 transition (使css的属性在一定时间内平滑的过渡)
+  #transition-property :设置哪些属性进行过渡
+  #transition-duration :完成过渡的时间
+  #transition-timing-function:设置动画缓动效果,ease逐渐变慢,ease-in加速,ease-out减速,ease-in-out加速后减速
+  #transition-delay:设置动画开始的延时
+
+
+*动画效果属性 animation
+  #"关键帧" @keyframes,它由多个百分比规则构成,比如0%到100%之间,分别在每个百分比中加上不同的属性
+    @keyframes name{
+      0%{元素状态}
+      ...
+      100%{元素状态}
+    }
+  #animation-name: @keyframes的名称
+  #animation-duration:动画完成一个周期的时间
+  #animation-timing-function:动画速度曲线
+  #animation-delay:动画延时开始时间
+  #animation-iteration-count:动画执行次数默认1,infinite(无限次)
+  #animation-direction:动画是否在下一周期逆向播放.默认是normal
+  #animation-play-state:动画是否暂停,默认是runing
+  #animation-fill-mode:对象动画时间之外的状态
+
+
+*变形 transform 向元素应用2D或3D转换,允许进行旋转,缩放,移动或倾斜
+  #transform参数:
+    -rotate(角度值):旋转
+    -translate(x,y):移动
+    -scale(x,y):缩放
+    -skew(x,y):扭曲
+    -matrix(a,b,c,d,e,f):矩阵
+  #改变元素基点的属性[transform-origin]:x y;(改变transform动作的基点)
+
+
+*对象阴影[box-shadow],语法:
+  #box-shadow:投影方式 x轴偏移量 y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色
+    (可以使用多个投影,使用多个投影是用','分开)
+
+
+*背景颜色线性渐变 [linear-gradient]:
+  #background:line-gradient(起点,起点颜色,过度色[可选],终点颜色)
+  起点:如果设置成top就是从上到下,设置成left就是从左到右,如果定义从top left就是从左上到右下
+  
+
+-------------------------------------------------------------------
