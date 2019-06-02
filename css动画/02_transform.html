@@ -42,13 +42,52 @@
         margin: 0 auto;
         border: 1px #ccc solid;
         background-color: #09f;
-
       }
+      .transform.origin > p span{
+        background-color: #0c0;
+        transform-origin: 0 -40px;
+      }
+
+      .transform > p .rotate{
+        transform: rotate(20deg);
+      }
+
+      .transform > p .translate{
+        transform: translate(20px,20px);
+      }
+
+      .transform > p .scale{
+        transform: scale(0.5);
+      }
+
+      .transform > p .skew{
+        transform: skew(20deg,-30deg);
+      }
+
 
     </style>
 </head>
 <body>
   <div class="transform">
+    <p>
+        <strong>旋转 (rotate)</strong>
+        <span class="rotate"></span>
+    </P>
+    <p>
+        <strong>移动 (translate)</strong>
+        <span class="translate"></span>
+    </P>
+    <p>
+        <strong>缩放 (scale)</strong>
+        <span class="scale"></span>
+    </P>
+    <p>
+        <strong>扭曲 (skew)</strong>
+        <span class="skew"></span>
+    </P>
+  </div>
+
+  <div class="transform origin">
     <p>
         <strong>旋转 (rotate)</strong>
         <span class="rotate"></span>
