@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <style typr="text/css">
+    .manDiv{
+
+    }
+
+    .wrap{
+      width: 100%;
+      height: 200px;
+      /*background: #255;*/
+      margin: 100px auto;
+    }
+
+    .cube{
+      width: 200px;
+      height: 200px;
+      /*background: #123;*/
+      margin: 0px auto;
+      transform-style: preserve-3d;
+      font-size: 40px;
+      text-align: center;
+      color: #fff;
+      position:relative;
+      transform : rotateY(20deg);
+    }
+
+    .perspective {
+      -webkit-perspective: 76em;
+              perspective: 76em;
+      /*-webkit-perspective-origin: 50% 50px;
+              perspective-origin: 50% 50px;*/
+
+    }
+
+    /*top*/
+    .cube1{
+      position:absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(11,32,122,.5);
+      transform : translateY(-100px) rotateX(90deg);
+      /*-webkit-transform-origin: top left;
+              transform-origin: top left;*/
+
+    }
+
+    .cube2{
+      position:absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(12,32,12,.5);
+      transform: translateZ(100px);
+    }
+
+    /**/
+    .cube3{
+      position:absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(122,32,121,.5);
+      transform : translateY(100px) rotateX(-90deg);
+      /*-webkit-transform-origin: bottom center;
+              transform-origin: bottom center;*/
+    }
+
+    /*#tab-top:checked  ~ .cube {
+      -webkit-transform: rotateX(-90deg);
+              transform: rotateX(-90deg);
+    }*/
+    /*.cube:hover{
+      animation: s 3s ease-in-out 0.1s infinite
+    }
+
+    @keyframes s{
+      0%  {transform : rotateX(-50deg) rotateY(20deg);}
+      50% {transform : rotateX(180deg) rotateY(-20deg);}
+      100%{transform : rotateX(-50deg) rotateY(20deg);}
+    }*/
+
+    </style>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div class="manDiv">
+
+  <input type="radio" name="tabs" id="tab-top">
+  <button onclick="cilckRotate();">rotate</button>
+    <div class="wrap perspective">
+        <div class="cube">
+          <div class="cube1"> 1 <button style="width:50px;height:50px; border:2px #11111 solid;"></button> </div>
+          <div class="cube2"> 2 <input type='text'></input></div>
+          <div class="cube3"> 3 </div>
+        </div>
+    </div>
+  </div>
+</body>
+<script>
+  function cilckRotate(){
+    $('.cube').css('transform','rotateX(-50deg)');
+  }
+</script>
+</html>
